@@ -1,4 +1,4 @@
-resource "aws_instance" "docker_server" {
+resource "aws_instance" "Docker-Terraform" {
   ami             = "ami-060d3509162bcc386"
   instance_type   = "t2.micro"
   key_name = "Natalierose"
@@ -6,11 +6,11 @@ resource "aws_instance" "docker_server" {
   user_data = file("docker.sh")
 
   tags = {
-    Name = "docker_server-terraform"
+    Name = "Docker-Terraform"
   }
 }
 
-resource "aws_instance" "tomcatt_server" {
+resource "aws_instance" "Tomcat-server-terraform" {
   ami             = "ami-060d3509162bcc386"
   instance_type   = "t2.micro"
   key_name = "Natalierose"
@@ -18,6 +18,6 @@ resource "aws_instance" "tomcatt_server" {
   user_data = file("tomcat.sh")
 
   tags = {
-    Name = "tomcat_server-terraform"
+    Name = "Tomcat-server-terraform"
   }
 }
